@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>sh.drumm.restic_backup</string>
+    <key>Program</key>
+    <string>/Users/christian/.config/restic/restic-backup.sh</string>
+    <key>RunAtLoad</key>
+    <true />
+    <key>StandardErrorPath</key>
+    <string>/Users/christian/Library/Logs/sh.drumm.restic_backup.error.log</string>
+    <key>StandardOutPath</key>
+    <string>/Users/christian/Library/Logs/sh.drumm.restic_backup.out.log</string>
+    <key>StartInterval</key>
+    <integer>3600</integer>
+  </dict>
+</plist>
