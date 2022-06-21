@@ -43,7 +43,6 @@ export RESTIC_PASSWORD
 echo $(date +"%Y-%m-%d %T") "Backup finished"
 
 # Housekeeping
-echo $$ > $PID_FILE
 echo $(date +"%Y-%m-%d %T") "Housekeeping start"
 
 /opt/homebrew/bin/restic forget --verbose --keep-last $RETENTION_LAST --keep-daily $RETENTION_DAYS --keep-weekly $RETENTION_WEEKS --keep-monthly $RETENTION_MONTHS
