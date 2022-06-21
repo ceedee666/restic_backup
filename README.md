@@ -18,3 +18,7 @@ RETENTION_MONTHS=6
 ```
 
 In my script these variable afre set by sourcing a file named `restic.conf`.
+
+# Acknowledgments 
+
+The scripts in this repository are based on the following blog post: https://szymonkrajewski.pl/macos-backup-restic/.
