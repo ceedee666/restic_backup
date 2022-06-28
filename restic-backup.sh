@@ -45,8 +45,8 @@ echo $(date +"%Y-%m-%d %T") "Backup finished"
 # Housekeeping
 echo $(date +"%Y-%m-%d %T") "Housekeeping start"
 
-/opt/homebrew/bin/restic forget --verbose --keep-last $RETENTION_LAST --keep-daily $RETENTION_DAYS --keep-weekly $RETENTION_WEEKS --keep-monthly $RETENTION_MONTHS
-/opt/homebrew/bin/restic prune --verbose
+/opt/homebrew/bin/restic forget --keep-last $RETENTION_LAST --keep-daily $RETENTION_DAYS --keep-weekly $RETENTION_WEEKS --keep-monthly $RETENTION_MONTHS
+/opt/homebrew/bin/restic prune 
 
 echo $(date +"%Y-%m-%d %T") "Housekeeping finished"
 
