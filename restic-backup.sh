@@ -26,10 +26,10 @@ if [[ $(networksetup -getairportnetwork en0 | grep -E "Mat-Mina-Rus-Ada|other-ne
   exit 3
 fi
 
-if [[ $(pmset -g ps | head -1) =~ "Battery" ]]; then
-  echo $(date +"%Y-%m-%d %T") "Computer is not connected to the power source."
-  exit 4
-fi
+#if [[ $(pmset -g ps | head -1) =~ "Battery" ]]; then
+#  echo $(date +"%Y-%m-%d %T") "Computer is not connected to the power source."
+#  exit 4
+#fi
 
 # Backup
 echo $$ > $PID_FILE
