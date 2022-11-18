@@ -38,10 +38,17 @@ echo $(date +"%Y-%m-%d %T") "Backup start"
 export RESTIC_REPOSITORY
 export RESTIC_PASSWORD
 
+# sometimes there are stale locks
+# remove them to be sure the backup runs
+/opt/homebrew/bin/restic unlock
 /opt/homebrew/bin/restic backup --verbose $BACKUP_PATHS --exclude-file=$EXCLUDE_FILE 
 
-echo $(date +"%Y-%m-%d %T") "Backup finished"
-
+if [[ $0 = 0 ]]; then
+  echo $(date +"%Y-%m-%d %T") "Backup finished successfully."
+else
+  echo $(date +"%Y-%m-%d %T") "Backup not sucessfull."
+  osascript -e 'display notification "Restic: Backup not successfull! Check log for details."'   
+fi
 # Housekeeping
 echo $(date +"%Y-%m-%d %T") "Housekeeping start"
 
