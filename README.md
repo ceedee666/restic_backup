@@ -1,3 +1,7 @@
+# About 
+
+This repository was moved to [https://codeberg.org/ceedee666/python-intro-mooc](https://codeberg.org/ceedee666/restic-backup/)
+
 # Restic backup scripts for MacOS
 
 This repository contains the shell scripts I wrote to perform regular backups using [restic](https://github.com/restic/restic). The backup is performed using SFTP to an Synology disk station. 
